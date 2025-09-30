@@ -1,0 +1,5 @@
+python -m uvicorn app.main:app --reload --port 8000
+
+
+flutter pub get                                                
+flutter run -d chrome
