@@ -52,7 +52,7 @@ Our project introduces a **multimodal digital twin system** that:
 ### 3. 시스템 설계
 
 #### 3.1. 시스템 구성도
-![(System Architecture)](system_architecture.jpg)  
+![(System Architecture)](readme/system_architecture.jpg)  
 
 #### 3.2. 사용 기술
 - **Frontend**: Flutter Web (Dart), Supabase Auth  
@@ -89,41 +89,41 @@ Our project introduces a **multimodal digital twin system** that:
 - **NHANES Model**:  
   - AUROC ≈ 0.99 (train/test split in report).  
   - Feature importance shows **HbA1c, glucose, BMI, SBP** as key drivers.  
-  - ![Top Features – Random Forest (NHANES)](Unknown-19.png)
-  - ![](nhanes_screen.jpeg)
+  - ![Top Features – Random Forest (NHANES)](readme/Unknown-19.png)
+  - ![](readme/nhanes_screen.jpeg)
 - **MIMIC-IV Model**:  
   - Logistic Regression achieved **AUROC ≈ 0.77, AP ≈ 0.44** (report).  
   - Key predictors: **HbA1c, glucose, triglycerides, LDL**.  
   - Provides coefficients.  
-  - ![ROC Curve – MIMIC-IV](roc_mimic.png)  
-  - ![Precision–Recall Curve – MIMIC-IV](pr_mimic.png)  
-  - ![Predicted Probability Distribution – MIMIC-IV](prob_dist_mimic.png) 
-  - ![](mimic_screen.jpeg)   
+  - ![ROC Curve – MIMIC-IV](readme/roc_mimic.png)  
+  - ![Precision–Recall Curve – MIMIC-IV](readme/pr_mimic.png)  
+  - ![Predicted Probability Distribution – MIMIC-IV](readme/prob_dist_mimic.png) 
+  - ![](readme/mimic_screen.jpeg)   
 - **DFU Model**:  
   - EfficientNet-B3 classifier trained on diabetic foot ulcer dataset.  
   - Confusion mostly occurs between **Wound vs Ulcer** categories.  
   - Grad-CAM highlights wound regions for interpretability.  
-  - ![Confusion Matrix – DFU](confusion.png)  
-  - ![Sample Predictions – DFU](Unknown-15.png) 
-  - ![](dfu_screen.jpeg)  
+  - ![Confusion Matrix – DFU](readme/confusion.png)  
+  - ![Sample Predictions – DFU](readme/Unknown-15.png) 
+  - ![](readme/dfu_screen.jpeg)  
 - **DR Model**:  
   - EfficientNet-B3 classifier trained on the **APTOS 2019 dataset**.  
   - Performs **5-class severity grading** (No_DR, Mild, Moderate, Severe, Proliferative_DR).  
   - Main confusion occurs between **Moderate vs Severe** classes.  
   - Grad-CAM highlights lesion regions on retina images for interpretability.  
-  - ![Confusion Matrix – DR](confusion_dr.png)  
-  - ![Grad-CAM Example – DR](Unknown-13_dr.png)  
-  - ![Classification Report – DR](TEST_DR.png)  
-  - ![](dr_screen.jpeg)
+  - ![Confusion Matrix – DR](readme/confusion_dr.png)  
+  - ![Grad-CAM Example – DR](readme/Unknown-13_dr.png)  
+  - ![Classification Report – DR](readme/TEST_DR.png)  
+  - ![](readme/dr_screen.jpeg)
 - **Gemini Coaching**:  
   - Structured outputs: weekly reports, meal/activity plans, education packs, lifestyle tips.  
   - Rendered as **cards in Flutter**.  
-  - ![Gemini page in UI](gemini_screen1.jpeg)  
-  - ![Gemini page in UI](gemini_screen2.jpeg) 
+  - ![Gemini page in UI](readme/gemini_screen1.jpeg)  
+  - ![Gemini page in UI](readme/gemini_screen2.jpeg) 
 - **Supabase Storage**: securely logs all inputs & predictions for longitudinal review.  
 
 #### 4.3. 디렉토리 구조
-![](repo_tree.png) 
+![](readme/repo_tree.png) 
 
 ```
 .
@@ -286,7 +286,7 @@ flutter run -d chrome
 ### 6. 소개 자료 및 시연 영상
 
 #### 6.1. 프로젝트 소개 자료
-![Poster](poster.jpg) 
+![Poster](readme/poster.jpg) 
 
 #### 6.2. 시연 영상
 [YouTube demo video](https://youtu.be/fQ592dZjNhk?si=m6krqeyzf57KnAAu) 
